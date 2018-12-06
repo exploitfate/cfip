@@ -22,5 +22,5 @@ chmod +x  /opt/cfip/update.sh
 ### Add cron task ( *`root`* user )
 
 ```
-0 0 * * * root test -x /opt/cfip/update.sh -a \! -d /run/systemd/system && perl -e 'sleep int(rand(86399))' && /opt/cfip/update.sh
+0 0 * * * root test -x /opt/cfip/update.sh && perl -e 'sleep int(rand(86399))' && /opt/cfip/update.sh
 ```
