@@ -41,11 +41,6 @@ awk '{ print "set_real_ip_from " $0 ";" }' $CF_TEMP_IP6 >> $CF_NGINX_CONFIG
 
 echo "" >> $CF_NGINX_CONFIG
 
-echo "# - DGA revers proxy IP Addresses" >> $CF_NGINX_CONFIG
-awk '{if($0) print "set_real_ip_from "  $0 ";" }' $DGA_PROXY_IP >> $CF_NGINX_CONFIG
-
-echo "" >> $CF_NGINX_CONFIG
-
 echo "real_ip_header CF-Connecting-IP;" >> $CF_NGINX_CONFIG
 
 echo "" >> $CF_NGINX_CONFIG
