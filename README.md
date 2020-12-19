@@ -10,7 +10,7 @@ Thanks [Marek Bosman](https://marekbosman.com/site/automatic-update-of-cloudflar
 ### Clone repo
 ```
 cd /opt && git clone https://github.com/exploitfate/cfip.git
-chmod +x  /opt/cfip/update.sh
+chmod +x /opt/cfip/update.sh
 ```
 
 ### Run script 
@@ -22,5 +22,5 @@ chmod +x  /opt/cfip/update.sh
 ### Add cron task ( *`root`* user )
 
 ```
-0 0 * * * test -x /opt/cfip/update.sh && perl -e 'sleep int(rand(21600))' && /opt/cfip/update.sh
+0 0 * * * test -x /opt/cfip/update.sh && /opt/cfip/update.sh
 ```
