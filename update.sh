@@ -31,7 +31,7 @@ CF_TEMP_IP4_LINES=$(wc -l < $CF_TEMP_IP4)
 CF_TEMP_IP6_LINES=$(wc -l < $CF_TEMP_IP6)
 
 MAX_LINES=20
-if [ "$CF_TEMP_IP4_LINES" -le "$MAX_LINES" ] && [ "$CF_TEMP_IP6_LINES" --le "$MAX_LINES" ]; then
+if [[ "$CF_TEMP_IP4_LINES" -le "$MAX_LINES" ]] && [[ "$CF_TEMP_IP6_LINES" --le "$MAX_LINES" ]]; then
 
   # Generate the new config file.
   echo "# CloudFlare IP Ranges" > $CF_NGINX_CONFIG
